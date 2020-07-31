@@ -4,38 +4,9 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-	crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-	integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-	crossorigin="anonymous"></script>
-<script
-	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-	crossorigin="anonymous"></script>
-<script
-	src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-	integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-	crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css"
-	href="https://cdn.datatables.net/v/bs4/dt-1.10.21/b-1.6.2/datatables.min.css" />
-
-<script type="text/javascript"
-	src="https://cdn.datatables.net/v/bs4/dt-1.10.21/b-1.6.2/datatables.min.js"></script>
+	<jsp:include page="../includes/head.jsp" />
+	
 <title>Balay Template</title>
-<script>
-	$(document).ready(function() {
-		$('#dtBasicExample').DataTable();
-		$('.dataTables_length').addClass('bs-select');
-	});
-</script>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../balay/css/owl.carousel.min.css">
-<link rel="stylesheet" href="../balay/css/style.css">
 
 </head>
 <body background="https://cdn.pixabay.com/photo/2016/07/23/11/57/road-1536748_960_720.jpg" style="margin: 0; padding: 0; background-size: cover;">
@@ -131,6 +102,13 @@
 			</div>
 		</div>
 	</div>
+	
+	<script>
+	$(document).ready(function() {
+		$('#dtBasicExample').DataTable();
+		$('.dataTables_length').addClass('bs-select');
+	});
+</script>
 </body>
 </html>
 
