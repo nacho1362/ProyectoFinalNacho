@@ -36,9 +36,7 @@ public class AuthServiceImpl  implements UserDetailsService {
             String username_ = usuario.getCorreo();
             String password_ = usuario.getContrasenia();
            
-            // agregamos el rol a la lista de roles
             List<SimpleGrantedAuthority> roles = Arrays.asList(new SimpleGrantedAuthority(rol));
-            // acá se hace el login !!!
             usuarioSistema = new User(username_, password_, roles);
         }else {
             logger.warn("el usuario no pudo ser encontrado, username :" + username);

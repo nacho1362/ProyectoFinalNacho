@@ -21,20 +21,15 @@ class ViajeController {
         
         mapa.put("viajes", viajeService);
 
-        return null; // acá la vista que carga viajes si no existe la borras después
+        return "/vistaUsuario"; 
     }
 
     @PostMapping
-    public String ingresar(
-        @ModelAttribute Viaje viaje,
-        ModelMap mapa){
-
-            // acá ingresas lo que llega del formulario, eso se hace con el mapa.put? no, eso le manda desde el controlador a la vista, desde la vista al controlador @ModelAttribute Viaje viaje,
-            viajeService.ingresar(viaje);
-            // donde está la vista?
-            // el modelo? entidades?
-            
-            return null; // acá la vista que use esto o puedes hacer un redirect despues de ingresar para que este método no sea tan grande
+    public String ingresar() {
+//        @ModelAttribute Viaje viaje,
+//        ModelMap mapa){
+//            viajeService.ingresar(viaje);
+  return "/vistaUsuario";
     }
 
 }

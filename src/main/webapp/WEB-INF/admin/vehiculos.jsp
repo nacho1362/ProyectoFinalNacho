@@ -32,7 +32,7 @@
 			</div>
 			<div class="col-10">
 				<h3>Nuevo Vehiculo</h3>
-				<form id="formulario" action="<c:url value='/usuarios'/>"
+				<form id="formulario" action="<c:url value='/admin/vehiculos'/>"
 					method="post" enctype="multipart/form-data">
 					<div class="row">
 						<div class="form-group col-sm">
@@ -59,7 +59,8 @@
 				
 				<h5>Lista Vehiculos</h5>
 				
-					<table id="dtBasicExample" class="table table-sm table-bordered table-dark"
+					<table id="dtBasicExample" class="table table-sm table-bordered table-dark
+					action="<c:url value='/admin/vehiculos'/>""
 						cellspacing="0" width="100%">
 						<thead>
 							<tr>

@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.stereotype.Component;
 
 import cl.nacho.conf.modal.entity.Vehiculo;
+import cl.nacho.conf.modal.entity.Viaje;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,6 +17,6 @@ import lombok.ToString;
 @ToString
 @Component
 @Data
-public class VehiculoDto {
-	    private List<Vehiculo> vehiculo;
+public class ViajeDto {
+			private List<Viaje> viaje;
 }

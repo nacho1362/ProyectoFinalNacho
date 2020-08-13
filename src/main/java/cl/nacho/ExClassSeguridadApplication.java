@@ -29,7 +29,7 @@ class AppStartupRunner implements ApplicationRunner{
 	public void run(ApplicationArguments args) throws Exception{
 		Usuario usuario = new Usuario();
 //		usuario.setNombre("administrador");
-//		usuario.setEmail("admin@gmail.com");
+//		usuario.setCorreo("admin@gmail.com");
 //		usuario.setContrasenia("1234");
 //		usuario.setRol(Rol.ROLE_ADMIN);
 //		servicioUsuario.registrarUsuario(usuario);

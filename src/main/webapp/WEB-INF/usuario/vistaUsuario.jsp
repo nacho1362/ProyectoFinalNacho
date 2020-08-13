@@ -45,21 +45,13 @@
 							 <input id="pasajeros" name="pasajeros"
 								type="number" class="form-control">
 						</div>
-
-						<div class="col-sm" style="margin-top: 30px">
-
-							<select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-
-								<c:forEach items="${vehiculo}" var="item"> 
-								
-								<option c:out="item.getmodelo"></option>
-								
-									<c:out value = "${vehiculo}"/><p>
-								
-								
+						
+						<div class="form-group col-sm" style="margin-top: 30px">
+							<label for="vehiculo">Vehiculo</label> 
+							<select class="form-control" id="vehiculo" name="vehiculo">
+								<c:forEach var="vehiculo" items="${Vehiculo.values()}">
+									<option value="${vehiculo}">${vehiculo}</option>									
 								</c:forEach>
-
-
 							</select>
 						</div>
 					</div>

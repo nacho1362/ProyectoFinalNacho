@@ -2,18 +2,17 @@ package cl.nacho.service;
 
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import cl.nacho.conf.modal.dao.ViajeDao;
-import cl.nacho.conf.modal.entity.EstadoViaje;
 import cl.nacho.conf.modal.entity.Viaje;
 
 @Service
 public class ViajeService {
-
+//	private final Logger logger = LoggerFactory.getLogger(ViajeService.class);
 	
 	@Autowired
 	private ViajeDao dao;
@@ -22,14 +21,12 @@ public class ViajeService {
         return dao.findAll();
     }
 	
-	private final Logger logger = LoggerFactory.getLogger(ViajeService.class);
-	
-	public Viaje ingresar(Viaje viaje) {
-        logger.info("Ingresando al usuario: " + viaje.toString());
-        viaje.setId(null);
-        viaje.setEstadoViaje(EstadoViaje.ESTADO_ESPERA);
-        return dao.save(viaje);
-    }
+//	 public Viaje ingresar(Viaje viaje) {
+//	        logger.info("Ingresando al usuario: " + viaje.toString());
+//	        viaje.setId(null);
+//	        return dao.save(viaje);
+//	    }
+	    
 	
 	public Viaje buscar(Integer id) {
 		return dao.findById(id).orElse(null);
