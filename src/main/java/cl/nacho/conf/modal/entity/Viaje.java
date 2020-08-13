@@ -31,6 +31,7 @@ public class Viaje implements Serializable{
 	private Integer id;
 	private String fecha;
 	private Integer pasajeros;
+	private EstadoViaje estadoViaje;
 	
 	@OneToMany(cascade = CascadeType.ALL , mappedBy = "viaje", orphanRemoval = true)
 	private List<Destino> destinos = new ArrayList<>();
@@ -40,5 +41,7 @@ public class Viaje implements Serializable{
 	@JoinColumn(name = "usuario_id")
 	private Usuario usuario;
 	
-	
+	//aqui
+
+	//viajes
 }

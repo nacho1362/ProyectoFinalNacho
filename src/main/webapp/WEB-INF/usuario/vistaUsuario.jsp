@@ -16,39 +16,55 @@
 
 			<div class="col-10">
 				<h3>Nuevo viaje</h3>
-				<form id="formulario" action="<c:url value='/usuarios'/>"
-					method="post" enctype="multipart/form-data">
+				<form 
+					id="formulario" 
+					action="<c:url value='/viajes'/>"
+					method="post">
+
 					<div class="row">
+
 						<div class="form-group col-sm">
-							<label for="Fecha">Fecha</label> <input type="date"
-								class="form-control" id="Fecha">
-						</div>
-						<div class="form-group col-sm">
-							<label for="Kilometros">Kilometros</label> <input type="number"
-								class="form-control" id="kilometros">
-						</div>
-						<div class="form-group col-sm">
-							<label for="Destino">Destino</label> <input type="text"
-								class="form-control" id="destino">
+							<label for="fecha">Fecha</label> 
+							<input id="fecha" name="fecha"
+								type="date" class="form-control" />
 						</div>
 
 						<div class="form-group col-sm">
-							<label for="CantidadPasajeros">Cantidad Pasajeros</label> <input
-								type="number" class="form-control" id="cantidadPasajeros">
+							<label for="kilometros">Kilometros</label>
+							<input id="kilometros" name="kilometros"
+							type="number" class="form-control">
+						</div>
+						<div class="form-group col-sm">
+							<label for="nombreDestino">Destino</label>
+							<input  id="nombreDestino" name="nombreDestino"
+								type="text"	class="form-control">
+						</div>
+
+						<div class="form-group col-sm">
+							<label for="pasajeros">Cantidad Pasajeros</label>
+							 <input id="pasajeros" name="pasajeros"
+								type="number" class="form-control">
 						</div>
 
 						<div class="col-sm" style="margin-top: 30px">
-							<select class="custom-select my-1 mr-sm-2"
-								id="inlineFormCustomSelectPref">
-								<option selected>Vehiculo</option>
-								<option value="1">hola</option>
-								<option value="2">probe</option>
-								<option value="3">como esta?</option>
+
+							<select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+
+								<c:forEach items="${vehiculo}" var="item"> 
+								
+								<option c:out="item.getmodelo"></option>
+								
+									<c:out value = "${vehiculo}"/><p>
+								
+								
+								</c:forEach>
+
+
 							</select>
 						</div>
 					</div>
 					<button id="boton" type="submit" class="btn-sm btn-primary"
-						style="margin-top: 5px;">Presupuesto</button>
+						style="margin-top: 5px;">Presupuesto</button> 
 				</form>
 
 				<div style="margin-top: 50px;">

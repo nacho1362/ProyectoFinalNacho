@@ -34,4 +34,7 @@ public class Destino implements Serializable{
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "viaje_id")
 	private Viaje viaje;
+
+//destinoo 
+
 }

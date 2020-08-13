@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import cl.nacho.conf.EncoderUtils;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -27,9 +28,13 @@ public class Usuario {
 	@Setter @Getter private Integer id;
 	@Setter @Getter private String nombre;
 	@Setter @Getter private Integer telefono;
-	@Setter @Getter private String email;
-	@Setter @Getter private String contrasena;
+	@Setter @Getter private String correo;
+	@Getter private String contrasenia;
 	@Setter @Getter private Rol rol;
+	
+	public void setContrasenia(String contrasenia) {
+        this.contrasenia = EncoderUtils.passwordEncoder().encode(contrasenia);
+    }
 	
 	@OneToMany( cascade = CascadeType.ALL , mappedBy = "usuario", orphanRemoval = true)
 	private List<Viaje> viajes = new ArrayList<>();
